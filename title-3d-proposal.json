@@ -1,0 +1,11 @@
+{
+  "headingLocation": "junk-or-no/app/page.js, hero h1",
+  "existingHeading": "A little food for thought.",
+  "proposedHeading": "Junk or No.",
+  "metadataLocation": "junk-or-no/app/layout.js, metadata.title",
+  "existingMetadata": "Junk or No — A little food for thought",
+  "proposedMetadata": "Junk or No — Food Checker",
+  "styleLocation": "junk-or-no/app/globals.css, new title styles and existing brand-symbol",
+  "titleStyle": "Purple-to-mint gradient face (#eed7ff, #ba73d9, #9bc7bc, #d5ffdf), six stepped shadows from #9274a5 to #655575, and a soft dark drop shadow. Heading wraps as Junk / or No.",
+  "emblemStyle": "Circular purple-to-mint beveled ring with a recessed dark square center, replacing the header leaf icon."
+}
