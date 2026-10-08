@@ -26,10 +26,12 @@ const foods = [
   { name: 'Popcorn', aliases: ['popcorn', '팝콘'], status: 'uncertain', emoji: '🍿', explanation: 'Air-popped popcorn is a whole-grain snack. Lots of butter, salt, or caramel can make it more of an occasional treat.' },
 ];
 
+const foodPairs = new Map(foods.flatMap((food) => food.aliases.map((alias) => [alias, food])));
+
 export function classifyFood(input) {
   const normalized = input.trim().toLowerCase().replace(/\s+/g, ' ');
   if (!normalized) return { status: 'empty', name: '', emoji: '✏️', explanation: 'Type a food first, or choose one of the examples below.' };
-  const food = foods.find((entry) => entry.aliases.includes(normalized));
+  const food = foodPairs.get(normalized);
   if (food) return { status: food.status, name: food.name, emoji: food.emoji, explanation: food.explanation };
   return { status: 'uncertain', name: input.trim().replace(/\s+/g, ' '), emoji: '🔎', explanation: 'This food is not in our small food guide yet. We would rather be honest than guess. Try a common food such as apple, chips, or soda.' };
 }
