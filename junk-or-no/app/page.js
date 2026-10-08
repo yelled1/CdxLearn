@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <header className="site-header mx-auto flex items-center justify-between">
-        <a href="#" className="brand flex items-center gap-2.5" aria-label="Junk or No home"><span className="brand-symbol"><Leaf /></span><span>junk or no<span className="brand-dot">.</span></span></a>
+        <a href="#" className="brand flex items-center gap-2.5" aria-label="Junk or No home"><span className="brand-symbol" aria-hidden="true" /><span>junk or no<span className="brand-dot">.</span></span></a>
         <nav className="flex items-center gap-7 text-sm" aria-label="Main navigation"><a className="nav-link hidden sm:block" href="#how-it-works">How it works</a><a className="nav-link hidden sm:block" href="#food-guide">Food for thought</a><a href="#checker" className="nav-pill flex items-center gap-2">Check a food <Arrow /></a></nav>
       </header>
 
@@ -37,7 +37,7 @@ export default function Home() {
         <section className="hero mx-auto grid items-center lg:grid-cols-2">
           <div className="hero-copy">
             <span className="eyebrow flex items-center gap-2"><span className="tiny-dot" /> SMALL CHOICES. GOOD FEELINGS.</span>
-            <h1>A little food<br />for <span className="thought">thought<svg viewBox="0 0 300 15" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9Q143-3 294 8" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" /></svg></span>.</h1>
+            <h1 className="app-title"><span className="app-title-depth" aria-hidden="true">Junk<br />or No.</span><span className="app-title-face">Junk<br />or No.</span></h1>
             <p className="hero-description">That snack you’re reaching for?<br className="hidden sm:block" /> Let’s get to know it a little better.</p>
             <div className="hero-note flex items-center gap-2"><span className="small-check">✓</span> Simple answers. A little more know-how.</div>
           </div>

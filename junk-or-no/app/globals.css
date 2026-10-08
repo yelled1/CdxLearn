@@ -10,8 +10,9 @@ button:focus-visible, a:focus-visible { outline: 3px solid #aeaeae; outline-offs
 .site-header, .hero, .how-section, .guide-section, .site-footer { max-width: 1120px; width: calc(100% - 80px); }
 .site-header { height: 102px; border-bottom: 1px solid #3c3c3c; }
 .brand { font-size: 24px; font-weight: 750; letter-spacing: -1px; }
-.brand-symbol { width: 36px; height: 36px; border-radius: 50%; background: var(--green); color: var(--cream); display: grid; place-items: center; }
-.brand-dot { color: #aaaaaa; }
+.brand-symbol { position: relative; flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #d283f0, #9785ac 50%, #90cdb8); box-shadow: inset 2px 2px 3px #efcaff80, inset -3px -3px 4px #405b6260, 2px 4px 8px #00000050; }
+.brand-symbol::before { content: ''; position: absolute; inset: 7px; border-radius: 5px; border: 5px solid transparent; background: linear-gradient(#252525, #252525) padding-box, conic-gradient(from 45deg, #9983b8, #dc8bed, #92d6b1, #9983b8) border-box; box-shadow: inset 2px 2px 3px #00000080, 1px 1px 3px #e7cbff50; }
+.brand-dot { color: #b78cd6; }
 .nav-link { color: #bebebe; }
 .nav-link:hover { color: #ebebeb; }
 .nav-pill { border: 1px solid #555555; border-radius: 100px; padding: 11px 17px; font-weight: 600; font-size: 13px; }
@@ -20,8 +21,9 @@ button:focus-visible, a:focus-visible { outline: 3px solid #aeaeae; outline-offs
 .eyebrow { color: #bfbfbf; font-size: 10px; letter-spacing: 2.1px; font-weight: 700; }
 .tiny-dot { width: 6px; height: 6px; background: #a1a1a1; border-radius: 50%; }
 h1 { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; font-size: clamp(64px, 7vw, 88px); line-height: 1.08; letter-spacing: -.045em; margin: 22px 0 24px; font-weight: 800; text-wrap: balance; }
-.thought { position: relative; font-style: normal; }
-.thought svg { position: absolute; width: 100%; height: 12px; color: #b5b5b5; bottom: -7px; left: 0; }
+.app-title { position: relative; color: #c5a4df; filter: drop-shadow(0 12px 12px #00000050); }
+.app-title-face { position: relative; display: inline-block; background: linear-gradient(135deg, #eed7ff 5%, #ba73d9 38%, #9bc7bc 72%, #d5ffdf 100%); background-clip: text; -webkit-background-clip: text; color: transparent; }
+.app-title-depth { position: absolute; inset: 0; color: #776087; text-shadow: 1px 1px #9274a5, 2px 2px #89709d, 3px 3px #806993, 4px 4px #776389, 5px 5px #6e5c7f, 6px 6px #655575; transform: translate(1px, 1px); }
 .hero-description { color: #bebebe; font-size: 17px; line-height: 1.7; }
 .hero-note { margin-top: 24px; font-size: 11px; color: #bebebe; }
 .small-check { width: 17px; height: 17px; background: #3d3d3d; color: #d1d1d1; display: grid; place-items: center; border-radius: 50%; font-size: 10px; }
